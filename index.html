@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Forsen's Minecraft Speedrun Bingo</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    </head>
+    <body onload="randomizeTiles()">
+        <div class="d-flex justify-content-center p-2">
+            <h1>Forsen's Minecraft Speedrun Bingo</h1>
+            <br />
+            <button
+                type="button"
+                class="btn btn-primary align-self-center ml-3"
+                onclick="randomizeTiles()"
+            >
+                Reroll
+            </button>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-column">
+                <img name="tile" onclick="toggleTile(this)" id="0" />
+                <img name="tile" onclick="toggleTile(this)" id="5" />
+                <img name="tile" onclick="toggleTile(this)" id="10" />
+                <img name="tile" onclick="toggleTile(this)" id="15" />
+                <img name="tile" onclick="toggleTile(this)" id="20" />
+            </div>
+            <div class="gallery-column">
+                <img name="tile" onclick="toggleTile(this)" id="1" />
+                <img name="tile" onclick="toggleTile(this)" id="6" />
+                <img name="tile" onclick="toggleTile(this)" id="11" />
+                <img name="tile" onclick="toggleTile(this)" id="16" />
+                <img name="tile" onclick="toggleTile(this)" id="21" />
+            </div>
+            <div class="gallery-column">
+                <img name="tile" onclick="toggleTile(this)" id="2" />
+                <img name="tile" onclick="toggleTile(this)" id="7" />
+                <img src="img/fs.png" style="opacity: 0.25" />
+                <img name="tile" onclick="toggleTile(this)" id="17" />
+                <img name="tile" onclick="toggleTile(this)" id="22" />
+            </div>
+            <div class="gallery-column">
+                <img name="tile" onclick="toggleTile(this)" id="3" />
+                <img name="tile" onclick="toggleTile(this)" id="8" />
+                <img name="tile" onclick="toggleTile(this)" id="13" />
+                <img name="tile" onclick="toggleTile(this)" id="18" />
+                <img name="tile" onclick="toggleTile(this)" id="23" />
+            </div>
+            <div class="gallery-column">
+                <img name="tile" onclick="toggleTile(this)" id="4" />
+                <img name="tile" onclick="toggleTile(this)" id="9" />
+                <img name="tile" onclick="toggleTile(this)" id="14" />
+                <img name="tile" onclick="toggleTile(this)" id="19" />
+                <img name="tile" onclick="toggleTile(this)" id="24" />
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="victoryModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="victoryModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="victoryModalLabel">
+                            VI VON ZULUL
+                        </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center">
+                        <img
+                            src="https://pbs.twimg.com/profile_images/871272558062161920/2P7-uQ2N_400x400.jpg"
+                        />
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-dismiss="modal"
+                            onclick="randomizeTiles()"
+                        >
+                            Play again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <audio id="audioPlayer" style="display: none">
+            <source src="" type="audio/mpeg" />
+        </audio>
+
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </body>
+</html>
